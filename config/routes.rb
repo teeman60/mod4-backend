@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  
+  resources :memes
   resources :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  # specify only: routes once we have them all set up
+
+  post "/login", to: "auth#create"
+
 end
